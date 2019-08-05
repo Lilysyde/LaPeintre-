@@ -1,0 +1,27 @@
+<div class="container pt-3 ">
+        <div class="row justify-content-sm-center form">
+          <div class="col-sm-10 col-md-6">
+            <div class="card border-info">
+                    <header class="head-form">
+              <h1>Login</h1>
+            </header>
+              <div class="card-body">
+                <div class="row">
+
+                  <div class="col-md-8">
+                      
+                      <input type="text" class="form-control mb-2 input-item" placeholder="Email" #userEmail required autofocus>
+                   
+                      <br>
+                      <input type="password" class="form-control mb-2 input-item" placeholder="Password" #userPassword required>
+                      <button class="btn btn-lg btn-primary btn-block mb-1" (click)="authService.login(userEmail.value, userPassword.value)">Login</button> 
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      

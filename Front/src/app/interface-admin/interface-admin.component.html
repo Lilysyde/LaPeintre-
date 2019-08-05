@@ -1,0 +1,53 @@
+<nav>
+    <ul class="menu">
+        <li><a [routerLink]="['/Interface']" routerLinkActive="active" href="#!">Contact</a></li>
+
+        <li><a href="#!">Réalisation</a></li>
+
+
+    </ul>
+</nav>
+<div   class="container" *ngFor="let contact of contacts">
+
+
+
+
+        <ul class="noBullet">
+            <li class="inputFields">
+                <label for="nom">{{contact.nom}}</label>
+
+            </li>
+            <li class="inputFields">
+                <label for="prenom">{{contact.prenom}}</label>
+
+            </li>
+            <li class="inputFields">
+                <label for="adress">{{contact.adresse}}</label>
+
+            </li>
+            <li class="inputFields">
+                <label for="adress">{{contact.ville}}</label>
+
+            </li>
+            <li class="inputFields">
+                <label for="adress">{{contact.cp}}</label>
+
+            </li>
+            <li class="inputFields">
+                <label for="adress">{{contact.tel}}</label>
+
+            </li>
+            <li class="inputFields">
+                <label for="adress">{{contact.mail}}</label>
+
+            </li>
+            <li class="inputFields">
+                <label for="adress">{{contact.commentaire}}</label>
+
+            </li>
+
+        </ul>
+
+        <button class="raise" (click)="deleteContact(contact.id)" >Supprimer</button>
+
+</div>

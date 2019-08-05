@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="row">
+        <h1>Un projet ? contactez moi ...</h1>
+    </div>
+
+    <div class="row input-container">
+
+        <div class="col-xs-12">
+            <form class="text-center border border-light p-5" (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+
+                <div class="styled-input">
+                    <input type="text" formControlName="nom" class="form-control validate"/>
+                    <label>Nom</label>
+                </div>
+
+                <div class="col-md-6 col-sm-12 form"></div>
+                <div class="styled-input" style="float:right;">
+                    <input type="text" formControlName="prenom" class="form-control validate"/>
+                    <label>Prenom</label>
+                </div>
+                <div class="styled-input wide">
+                    <input type="text" formControlName="adresse" class="form-control validate" />
+                    <label>Adresse</label>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input">
+                        <input type="text" formControlName="cp" class="form-control validate"/>
+                        <label>Cp</label>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input" style="float:right;">
+                        <input type="text" formControlName="ville" class="form-control validate"/>
+                        <label>Ville</label>
+                    </div>
+
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input">
+                        <input type="text" formControlName="mail" class="form-control validate"/>
+                        <label>Email</label>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input" style="float:right;">
+                        <input type="text" formControlName="tel" class="form-control validate"/>
+                        <label>Phone Number</label>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="styled-input wide">
+                        <textarea formControlName="commentaire" class="form-control validate"></textarea>
+                        <label>Message</label>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <button type="submit"class="btn-lrg submit-btn">Envoyer Message</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+html {
+  box-sizing: border-box;
+}
+
+
+
+// body,
+// html {
+//   width: 100%;
+//   height: 100%;
+//   background: #1c1d22;
+//   font-family: "Varela Round", sans-serif;
+// }
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 720px;
+ margin-left:25%;
+  list-style: none;
+}
+
+.menu li {
+  width: 125px;
+  height: 50px;
+  transition: background-position-x 0.9s linear;
+  text-align: center;
+
+  a {
+    font-size: 22px;
+    color: #777;
+    text-decoration: none;
+    transition: all 0.45s;
+  }
+
+  &:hover {
+    background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEi%0D%0AIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhs%0D%0AaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0%0D%0AaD0iMzkwcHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDM5MCA1MCIgZW5hYmxlLWJhY2tn%0D%0Acm91bmQ9Im5ldyAwIDAgMzkwIDUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0i%0D%0Abm9uZSIgc3Ryb2tlPSIjZDk0ZjVjIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGlt%0D%0AaXQ9IjEwIiBkPSJNMCw0Ny41ODVjMCwwLDk3LjUsMCwxMzAsMAoJYzEzLjc1LDAsMjguNzQtMzgu%0D%0ANzc4LDQ2LjE2OC0xOS40MTZDMTkyLjY2OSw0Ni41LDI0My42MDMsNDcuNTg1LDI2MCw0Ny41ODVj%0D%0AMzEuODIxLDAsMTMwLDAsMTMwLDAiLz4KPC9zdmc+Cg==");
+    animation: line 1s;
+  }
+
+  &:hover a {
+    color: #d94f5c;
+  }
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@keyframes line {
+  0% {
+    background-position-x: 390px;
+  }
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+// body {
+//   margin-top: 6em;
+//   padding: 0;
+//   overflow: hidden;
+//   background: #111;
+//   background-repeat: no-repeat;
+// }
+
+.container{
+  background: url(https://source.unsplash.com/TV2gg2kZD1o/1600x800);
+//   background-repeat: no-repeat;
+  position: relative;
+  margin-top: 18em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 750px;
+  height: 500px;
+  text-align: center;
+//   display: flex;
+  color: white;
+  box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, .5);
+}
+
+
+// .signupForm {
+//   width: 70%;
+//   padding: 30px 0;
+//   background: rgba(20, 40, 40, .8);
+//   transition: .2s;
+//   h2 {
+//     font-weight: 300;
+//   }
+// }
+
+.inputFields {
+
+  font-size: 16px;
+  padding: 10px;
+  width: 650px;
+  border: 1px solid rgba(10, 180, 180, 1);
+
+
+  color: white;
+
+}
+
+.noBullet {
+  list-style-type: none;
+  padding: 30px;
+}
+
+
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+
+$colors: (
+    raise: rgba(10, 180, 180), 
+    );
+
+    @each $button, $color in $colors {
+        .#{$button} {
+          --color: #{$color};
+          --hover: #{adjust-hue($color, 45deg)};
+        }
+      }
+      button {  
+        color: var(--color);
+        transition: 0.25s;
+      }
+
+      button {
+        background: none;
+        border: 1px solid;
+        font: inherit;
+        line-height: 1;
+        margin: 0.5em;
+        padding: 1em 1em;
+      }
+

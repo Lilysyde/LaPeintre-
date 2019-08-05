@@ -69,6 +69,47 @@ app.delete('/contact/:id', (req, res) => {
 
   // Fin Contact
 
+// temoignage 
+
+
+// GET - Récupération de l'ensemble des données de ta table
+app.get('/temoignage', (req, res) => {
+
+  // connection à la base de données, et sélection des employés
+  connection.query('SELECT * from temoignage', (err, results) => {
+
+    if (err) {
+console.log(err);
+      // Si une erreur est survenue, alors on informe l'utilisateur de l'erreur
+      res.status(500).send('Erreur lors de la récupération des temoignages');
+    } else {
+
+      // Si tout s'est bien passé, on envoie le résultat de la requête SQL en tant que JSON.
+      res.json(results);
+    }
+  });
+});
+
+app.post('/temoignage', (req, res) => {
+
+  // récupération des données envoyées
+  const formData = req.body;
+
+  // connexion à la base de données, et insertion de l'employé
+  connection.query('INSERT INTO temoignage SET ?', formData, (err, results) => {
+
+    if (err) {
+      // Si une erreur est survenue, alors on informe l'utilisateur de l'erreur
+      console.log(err);
+      res.status(500).send("Erreur lors de la sauvegarde d un temoignage");
+    } else {
+      // Si tout s'est bien passé, on envoie un statut "ok".
+      res.sendStatus(200);
+    }
+  });
+});
+
+// fin temoignage
 
 app.listen(port, (err) => {
     if (err) {

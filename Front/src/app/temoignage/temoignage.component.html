@@ -1,2 +1,37 @@
-<p>temoignage works!</p>
+
+
+    <button onclick="document.getElementById('modform').style.display='block'" style="width:auto;">Si vous voulez temoigner cliquer ici  ...</button>
+
+    <div id="modform" class="background-modal">
+
+        <form (ngSubmit)="onSubmit()" [formGroup]="temoignageForm" class="modal-content animate" action="your-page.php">
+
+            <div class="close-button">
+                <span onclick="document.getElementById('modform').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+            </div>
+
+            <div  class="container">
+                    <textarea formControlName="commentaire" class="form-control validate text" placeholder="     Temoignage"></textarea>
+                
+                    <input type="text" formControlName="nom" class="form-control validate" placeholder="Nom"/>
+
+
+                <button type="submit">Envoyer</button>
+              
+            </div>
+
+            
+        </form>
+    </div>
+
+
+
+<div *ngFor="let temoignage of temoignages" class ="container">
+
+<p class="bubble speech">{{temoignage.commentaire}} <br>- {{temoignage.nom}} -</p>
+
+</div>
+
+
 <app-footer></app-footer>
